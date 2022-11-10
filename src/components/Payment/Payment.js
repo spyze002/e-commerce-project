@@ -13,6 +13,7 @@ const Payment = () => {
     <Box sx={{
       display: 'flex',
       flexDirection: 'column',
+      flexWrap: 'wrap',
       width: '80%',
       justifyContent: 'center',
       alignItems: 'center',
@@ -25,6 +26,7 @@ const Payment = () => {
        onChange={handleChange}
        sx={{
         display: 'flex',
+        flexWrap: 'wrap',
         justifyContent: 'space-between',
         width: '60%',
 
@@ -42,9 +44,11 @@ const Payment = () => {
       }} />
       <Box sx={{
         display: 'flex',
+        flexWrap: 'wrap',
         width: '60%',
         alignItems: 'center',
-        mt: 2
+        mt: 2,
+  
       }}>
         <TextField  variant='standard'  type='date' />
         <TextField  variant='standard' label = 'Pin' type='password' sx={{
