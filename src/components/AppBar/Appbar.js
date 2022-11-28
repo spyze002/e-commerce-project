@@ -1,134 +1,57 @@
-import React, { useState } from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+import React from "react";
+import {  Box } from "@mui/material";
+import { Link } from "react-router-dom";
+import './Appbar.css'
+import logo from '../Assets/logo.png'
+const Appbar = () =>{
+  return(
+    <Box sx={{
+      width: '100%',
+      height: '100px',
+      position: 'static',
+      background: '#231f20'
+    }}>
+    <Box sx={{
+      display: 'flex'
+    }} >
+   <Box
+   component='img'
+   src ={logo}
+   sx={{
+    width: 150,
+    height: 100,
+   }}
+  />
 
-const pages = ['Home', 'Shop', 'About', 'Contact', 'Elements'];
+      <ul 
 
-
-
-const Appbar = () => {
-  const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElUser, setAnchorElUser] = useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
-  return (
-    <AppBar position="static" sx={{ background: '#A903FA'}} >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters >
+      style={
+        {
+          display: 'flex',
+          width: '100%',
+          justifyContent: 'space-evenly',
+          flexWrap: 'wrap'
+        }
         
-          <Typography
-            variant="h6"
-            noWrap
-            component="a" //change this component to img to add image and src
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Image logo
-          </Typography>
+      }>
+        <li>
+          <Link className="lis" to={'/'} >Home </Link>
+        </li>
+        <li>
+          <Link className="lis" to={'/payments'} > Payments  </Link>
+        </li>
+        <li>
+          <Link className="lis" to={'/'} > About  </Link>
+        </li>
 
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-
-          </Box>
- {/** can add any icon here to be near the image logo*/}
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Image logo
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-
-  
-        </Toolbar>
-      </Container>
-    </AppBar>
-  );
+        <li>
+          <Link className="lis" to={'/'} > Contact Us </Link>
+        </li>
+      </ul>
+    </Box>
+    
+    </Box>
+  )
 }
+
 export default Appbar;

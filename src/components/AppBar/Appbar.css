@@ -1,0 +1,16 @@
+ul , li{
+    list-style-type: none;
+    margin-top: 20px;
+
+
+
+}
+.lis{
+    text-decoration: none;
+    color: aliceblue;
+}
+.lis:hover{
+    color: rgba(168, 34, 182, 0.553);
+    
+}
+/* this sention will be only for styleing componets that are not from material UI */
