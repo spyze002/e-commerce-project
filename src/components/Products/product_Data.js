@@ -39,5 +39,45 @@ const product_data =[
         currency: '$',
         pic: 'https://images.unsplash.com/photo-1602231379593-b85a472e3c99?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGpvcmRhbiUyMHNob2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'
     },
+    {
+        id: 6,
+        prod_name: "Nike Air Force 1'07 LE",
+        description: "Men's White/White",
+        price: 110.00,
+        currency: '$',
+        pic: 'https://images.footlocker.com/is/image/EBFL2/W2288111?wid=267&hei=267&fmt=png-alpha'
+    },
+    {
+        id: 7,
+        prod_name: 'Shoe 7',
+        description: "Men's White/White",
+        price: 350,
+        currency: '$',
+        pic: 'https://images.footlocker.com/is/image/EBFL2/A4086100?wid=267&hei=267&fmt=png-alpha'
+    },
+    {
+        id: 8,
+        prod_name: 'Shoe 8',
+        description: 'shoe 8 decription',
+        price: 350,
+        currency: '$',
+        pic: 'https://images.unsplash.com/photo-1602231379593-b85a472e3c99?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGpvcmRhbiUyMHNob2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+        id: 9,
+        prod_name: 'Shoe 9',
+        description: 'shoe 9 decription',
+        price: 350,
+        currency: '$',
+        pic: 'https://images.unsplash.com/photo-1602231379593-b85a472e3c99?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGpvcmRhbiUyMHNob2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+        id: 10,
+        prod_name: 'Shoe 10',
+        description: 'shoe 10 decription',
+        price: 350,
+        currency: '$',
+        pic: 'https://images.footlocker.com/is/image/EBFL2/D0609001?wid=267&hei=267&fmt=png-alpha'
+    },
 ]
 export default product_data;

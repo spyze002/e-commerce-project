@@ -10,8 +10,8 @@ const Appbar = () =>{
     <Box sx={{
       width: '100%',
       height: '100px',
-      position: 'static',
-      background: '#231f20'
+      background: '#231f20',
+      position: 'fixed'
     }}>
     <Box sx={{
       display: 'flex'

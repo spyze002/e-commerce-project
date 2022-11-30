@@ -13,11 +13,12 @@ const Products = () => {
             flexDirection: 'column',
             gap: 1,
             alignItems: 'center',
-            mt:1,
+            mt:13,
+            border: '1px solid grey'
 
             
            }}> 
-           <Box
+           <Box //container to style headings
             sx={{
             width: '100%',
             display: 'flex',
@@ -35,18 +36,23 @@ const Products = () => {
   <Box component='img'
   src={items.pic}
   sx={{
-    width: 400,
-    height: 500,
+    width: 300,
+    height: 400,
     borderRadius: 2,
   }} />
   
   <Box>
-    <Box>
+    <Box sx={{
+      textTransform: 'capitalize',
+      fontWeight: 'bold',
+      opacity: 0.5
+      
+    }}>
     {items.description}
     </Box>
     <Box>
 
-    <Button>    {items.currency}  {items.price}  </Button>
+    <Button>    {items.currency} {items.price}  </Button>
     </Box>
  
 
@@ -60,14 +66,17 @@ const Products = () => {
 
   )
   return (
+    
     <Box sx={{
       display: 'flex',
       justifyContent: 'space-evenly',
       gap: 1,
       flexWrap: 'wrap',
+   
       }}>
       {ListItems}
     </Box>
+
   )
 }
 
