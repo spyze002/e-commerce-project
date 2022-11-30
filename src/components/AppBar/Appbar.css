@@ -13,4 +13,12 @@ ul , li{
     color: rgba(168, 34, 182, 0.553);
     
 }
+.SearchBox{
+    position: relative;
+    width: 250px;
+    margin-left: 20px;
+    height: 30px;
+    border-radius: 10px;
+    border: opx solid #fff;
+}
 /* this sention will be only for styleing componets that are not from material UI */

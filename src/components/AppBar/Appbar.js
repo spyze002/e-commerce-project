@@ -1,8 +1,10 @@
 import React from "react";
-import {  Box } from "@mui/material";
+import {  Box, Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import './Appbar.css'
 import logo from '../Assets/logo.png'
+
+//updates on nav bar
 const Appbar = () =>{
   return(
     <Box sx={{
@@ -30,7 +32,8 @@ const Appbar = () =>{
           display: 'flex',
           width: '100%',
           justifyContent: 'space-evenly',
-          flexWrap: 'wrap'
+          flexWrap: 'wrap',
+          gap: 1,
         }
         
       }>
@@ -46,6 +49,22 @@ const Appbar = () =>{
 
         <li>
           <Link className="lis" to={'/'} > Contact Us </Link>
+        </li>
+        <li>
+          
+          <Box sx={{
+            display: 'flex',
+            marginBottom: 10,
+            position: 'relative'
+          }}>
+          {/* <Typography className="lis">
+              Search
+            </Typography> */}
+            <Button sx={{color: '#fff', textTransform: 'capitalize' }}>Search</Button>
+            <input className="SearchBox" type={'search'} />
+          </Box>
+          
+
         </li>
       </ul>
     </Box>
